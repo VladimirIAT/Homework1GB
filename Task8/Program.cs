@@ -3,10 +3,16 @@ using static System.Console;
 
 Write("Введите число ");
 int a = int.Parse(ReadLine()!);
-int b = a%2;
+int b = 0;
 
-if (b == 0) {
-    WriteLine("Да, число четное");
-} else {
-    WriteLine("Нет, число нечетное");
-}
+if (a < 2) {
+    WriteLine("Нет четных чисел");
+    } else {
+        while (b < a) {
+            b = b + 2;
+            if (b <= a) {
+                WriteLine($"{b}, ");
+            }
+        }
+    }
+
